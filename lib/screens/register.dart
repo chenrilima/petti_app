@@ -7,6 +7,8 @@ import '../widgets/cards.dart';
 import '../widgets/text_formfield.dart';
 
 class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
+
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -35,19 +37,19 @@ class _RegisterState extends State<Register> {
                         width: 84,
                         height: 84,
                       ),
-                      Text(
+                      const Text(
                         'Petti',
                       )
                     ],
                   ),
-                  Container(
+                  const SizedBox(
                     width: 300,
                     child: Text(
                       'Que bom ver você por aqui, faça login e usufrua da maior plataforma de emprego Pet do Brasil.',
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextFormFields(
@@ -65,7 +67,7 @@ class _RegisterState extends State<Register> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
+                      SizedBox(
                         width: 25,
                         child: Checkbox(
                           value: check,
@@ -79,11 +81,12 @@ class _RegisterState extends State<Register> {
                       RichText(
                         text: TextSpan(
                             text: 'Eu li e concordo com os ',
-                            style: TextStyle(color: Colors.black, fontSize: 12),
+                            style: const TextStyle(
+                                color: Colors.black, fontSize: 12),
                             children: <TextSpan>[
                               TextSpan(
                                   text: 'Termos e condições',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
@@ -93,7 +96,7 @@ class _RegisterState extends State<Register> {
                                     }),
                               TextSpan(
                                   text: ' e\n',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black, fontSize: 12),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
@@ -101,7 +104,7 @@ class _RegisterState extends State<Register> {
                                     }),
                               TextSpan(
                                   text: 'Politica de Privacidade',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
@@ -132,7 +135,7 @@ class _RegisterState extends State<Register> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Buttons(

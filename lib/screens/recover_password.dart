@@ -6,6 +6,8 @@ import '../widgets/cards.dart';
 import '../widgets/text_formfield.dart';
 
 class RecoverPassword extends StatefulWidget {
+  const RecoverPassword({Key? key}) : super(key: key);
+
   @override
   _RecoverPasswordState createState() => _RecoverPasswordState();
 }
@@ -33,12 +35,12 @@ class _RecoverPasswordState extends State<RecoverPassword> {
                         width: 84,
                         height: 84,
                       ),
-                      Text(
+                      const Text(
                         'Petti',
                       )
                     ],
                   ),
-                  Container(
+                  const SizedBox(
                     width: 238,
                     child: Text(
                       'Ah não, esqueci minha senha =/',
@@ -48,19 +50,19 @@ class _RecoverPasswordState extends State<RecoverPassword> {
                   Container(
                     width: 238,
                     padding: const EdgeInsets.only(top: 32),
-                    child: Text(
+                    child: const Text(
                       'Não se preocupe, nos informe seu e-mail para enviarmos o link para redefinição de uma nova senha.',
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 22,
                   ),
                   TextFormFields(
                     hintText: 'E-mail',
                     onChanged: () {},
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 63,
                   ),
                   Buttons(

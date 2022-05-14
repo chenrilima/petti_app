@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petti_app/screens/register.dart';
@@ -11,12 +10,14 @@ import '../utils/param.dart';
 import '../widgets/background.dart';
 import '../widgets/buttons.dart';
 import '../widgets/cards.dart';
-import '../widgets/text_formfield.dart';
+
 import 'company_professional.dart';
 import 'filter.dart';
 import 'login.dart';
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -49,25 +50,23 @@ class _HomeState extends State<Home> {
             ),
           ),
           GestureDetector(
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    "images/filter.png",
-                    width: 50,
-                    height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "images/filter.png",
+                  width: 50,
+                  height: 50,
+                ),
+                Text(
+                  'Filtrar',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                    color: AppColors.white,
                   ),
-                  Text(
-                    'Filtrar',
-                    style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: AppColors.white,
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
             onTap: () {
               Navigator.push(
@@ -86,7 +85,7 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CompanyProfessional()),
+                        builder: (context) => const CompanyProfessional()),
                   );
                 },
                 child: ContainerCard(
@@ -101,7 +100,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                               width: 110,
                               height: 50,
                               child: Image.asset(
@@ -123,38 +122,36 @@ class _HomeState extends State<Home> {
                             )
                           ],
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Container(
-                                  width: 175,
-                                  child: Text(
-                                    'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
-                                    style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
-                                      color: AppColors.black,
-                                    ),
-                                  )),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 41.0),
-                                child: Buttons(
-                                  width: 15,
-                                  heigth: 10,
-                                  text: 'Entrar em contato',
-                                  onPressed: () => _showDialog(),
-                                ),
-                              )
-                            ],
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                                width: 175,
+                                child: Text(
+                                  'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
+                                  style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 10,
+                                    color: AppColors.black,
+                                  ),
+                                )),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 41.0),
+                              child: Buttons(
+                                width: 15,
+                                heigth: 10,
+                                text: 'Entrar em contato',
+                                onPressed: () => _showDialog(),
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -165,7 +162,7 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CompanyProfessional()),
+                        builder: (context) => const CompanyProfessional()),
                   );
                 },
                 child: ContainerCard(
@@ -180,7 +177,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                               width: 110,
                               height: 50,
                               child: Image.asset(
@@ -210,7 +207,7 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Container(
+                            SizedBox(
                                 width: 175,
                                 child: Text(
                                   'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
@@ -236,7 +233,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               ContainerCard(
@@ -251,7 +248,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 110,
                             height: 50,
                             child: Image.asset(
@@ -281,7 +278,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Container(
+                          SizedBox(
                               width: 175,
                               child: Text(
                                 'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
@@ -321,16 +318,14 @@ class _HomeState extends State<Home> {
         // return object of type Dialog
         return AlertDialog(
           contentPadding: const EdgeInsets.all(16),
-          content: Container(
+          content: SizedBox(
             width: 270,
             height: 220,
             child: Column(
               children: [
-                Container(
-                  child: Image.asset(
-                    "images/img-perfil.png",
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                  "images/img-perfil.png",
+                  fit: BoxFit.cover,
                 ),
               ],
             ),
@@ -347,7 +342,7 @@ class _HomeState extends State<Home> {
                     MaterialPageRoute(builder: (context) => Login()),
                   );
                 }),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Buttons(

@@ -7,6 +7,8 @@ import '../widgets/cards.dart';
 import '../widgets/text_formfield.dart';
 
 class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -34,19 +36,19 @@ class _LoginState extends State<Login> {
                         width: 84,
                         height: 84,
                       ),
-                      Text(
+                      const Text(
                         'Petti',
                       )
                     ],
                   ),
-                  Container(
+                  const SizedBox(
                     width: 238,
                     child: Text(
                       'Que bom ver você por aqui, faça login e usufrua da maior plataforma de emprego Pet do Brasil.',
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextFormFields(
@@ -58,18 +60,18 @@ class _LoginState extends State<Login> {
                     onChanged: () {},
                   ),
                   GestureDetector(
-                    child: Align(
+                    child: const Align(
                         alignment: Alignment.bottomRight,
                         child: Text('Esqueceu sua senha?')),
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => RecoverPassword()),
+                            builder: (context) => const RecoverPassword()),
                       );
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 21,
                   ),
                   Row(
@@ -91,7 +93,7 @@ class _LoginState extends State<Login> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Buttons(

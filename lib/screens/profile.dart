@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/appcolors.dart';
 import '../widgets/background.dart';
-import '../widgets/buttons.dart';
 import '../widgets/cards.dart';
-import '../widgets/text_formfield.dart';
 
 class Profile extends StatefulWidget {
+  const Profile({Key? key}) : super(key: key);
+
   @override
   _ProfileState createState() => _ProfileState();
 }
@@ -19,7 +19,7 @@ class _ProfileState extends State<Profile> {
       title: 'Perfil',
       content: Padding(
         padding: const EdgeInsets.only(top: 36),
-        child: Container(
+        child: SizedBox(
             width: double.infinity,
             child: Column(
               children: [
@@ -50,26 +50,24 @@ class _ProfileState extends State<Profile> {
       height: 70,
       content: Padding(
         padding: const EdgeInsets.only(left: 16.0, right: 16),
-        child: Container(
-          child: Row(
-            children: [
-              Icon(
-                icon,
-                size: 40,
+        child: Row(
+          children: [
+            Icon(
+              icon,
+              size: 40,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Text(
+              text!,
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+                color: AppColors.black,
               ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                text!,
-                style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: AppColors.black,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

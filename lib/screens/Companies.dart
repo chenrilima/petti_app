@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Companies extends StatefulWidget {
+  const Companies({Key? key}) : super(key: key);
+
   @override
   _CompaniesState createState() => _CompaniesState();
 }
@@ -9,53 +11,64 @@ class Companies extends StatefulWidget {
 class _CompaniesState extends State<Companies> {
   bool _checkBox = false;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Form(
-        child: ListView(padding: EdgeInsets.all(16), children: [
+        child: ListView(padding: const EdgeInsets.all(16), children: [
           TextFormField(
-            decoration: InputDecoration(hintText: "Nome Completo"),
+            decoration: const InputDecoration(hintText: "Nome Completo"),
             // ignore: missing_return
             validator: (text) {
+              return null;
+
               // if (text.isEmpty) return "Preencha!";
             },
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           TextFormField(
-            decoration: InputDecoration(hintText: "Nome da Empresa"),
+            decoration: const InputDecoration(hintText: "Nome da Empresa"),
             // ignore: missing_return
             validator: (text) {
+              return null;
+
               // if (text.isEmpty) return "Preencha";
             },
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           TextFormField(
-            decoration: InputDecoration(hintText: "E-mail Corporativo"),
+            decoration: const InputDecoration(hintText: "E-mail Corporativo"),
             // ignore: missing_return
             validator: (text) {
+              return null;
+
               // if (text.isEmpty) return "Preencha";
             },
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           TextFormField(
-            decoration: InputDecoration(hintText: "Telefone"),
+            decoration: const InputDecoration(hintText: "Telefone"),
             // ignore: missing_return
             validator: (text) {
+              return null;
+
               // if (text.isEmpty) return "Preencha ";
             },
             keyboardType: TextInputType.number,
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           TextFormField(
-            decoration: InputDecoration(hintText: "Segmento de Atuação"),
+            decoration: const InputDecoration(hintText: "Segmento de Atuação"),
             // ignore: missing_return
             validator: (text) {
+              return null;
+
               // if (text.isEmpty) return "Preencha ";
             },
           ),
-          SizedBox(height: 35.0),
+          const SizedBox(height: 35.0),
           CheckboxListTile(
-            title: Text(
+            title: const Text(
               "Li e concordo com os termos e Condições e Política de Privacidade.",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -70,17 +83,18 @@ class _CompaniesState extends State<Companies> {
           ),
 
           //child: screens[_currentIndex],
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           Column(
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xff00C29D),
-                    padding: EdgeInsets.symmetric(horizontal: 90, vertical: 15),
-                    shape: BeveledRectangleBorder(
+                    primary: const Color(0xff00C29D),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 90, vertical: 15),
+                    shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                     )),
-                child: Text("Cadastrar"),
+                child: const Text("Cadastrar"),
                 onPressed: () {},
               ),
             ],

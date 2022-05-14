@@ -14,7 +14,7 @@ class TextFormFields extends StatelessWidget {
         decoration: InputDecoration(
           fillColor: Colors.grey[200],
           filled: true,
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           hintText: hintText,
         ),
         onChanged: onChanged(),

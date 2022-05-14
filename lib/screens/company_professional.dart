@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 
 import '../utils/param.dart';
@@ -10,6 +8,8 @@ import '../widgets/buttons.dart';
 import '../widgets/cards.dart';
 
 class CompanyProfessional extends StatefulWidget {
+  const CompanyProfessional({Key? key}) : super(key: key);
+
   @override
   _CompanyProfessionalState createState() => _CompanyProfessionalState();
 }
@@ -35,10 +35,10 @@ class _CompanyProfessionalState extends State<CompanyProfessional> {
                   width: 217,
                   height: 153,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Container(
+                const SizedBox(
                   width: 296,
                   child: Text(
                     'Ainda não possui cadastro na maior plataforma de emprego Pet do Brasil?',
@@ -48,12 +48,12 @@ class _CompanyProfessionalState extends State<CompanyProfessional> {
                 Container(
                   padding: const EdgeInsets.only(top: 20),
                   width: 296,
-                  child: Text(
+                  child: const Text(
                     'Não perca mais tempo, cadastre-se e encontre o emprego dos seus sonhos!!!',
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 62,
                 ),
                 Buttons(

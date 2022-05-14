@@ -10,7 +10,12 @@ class Buttons extends StatelessWidget {
   double? heigth;
 
   Buttons(
-      {required this.onPressed, this.text, this.width = 30, this.heigth = 15});
+      {Key? key,
+      required this.onPressed,
+      this.text,
+      this.width = 30,
+      this.heigth = 15})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

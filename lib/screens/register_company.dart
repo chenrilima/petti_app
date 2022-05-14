@@ -6,12 +6,14 @@ import '../widgets/cards.dart';
 import '../widgets/text_formfield.dart';
 
 class RegisterCompany extends StatefulWidget {
+  const RegisterCompany({Key? key}) : super(key: key);
+
   @override
   _RegisterCompanyState createState() => _RegisterCompanyState();
 }
 
 class _RegisterCompanyState extends State<RegisterCompany> {
-  var _image = true;
+  final _image = true;
 
   @override
   Widget build(BuildContext context) {
@@ -59,56 +61,53 @@ class _RegisterCompanyState extends State<RegisterCompany> {
                   hintText: 'Breve descrição da vaga',
                   onChanged: () {},
                 ),
-                Container(
-                  child: new GestureDetector(
-                    onTap: () async {
-                      FocusScope.of(context).requestFocus(new FocusNode());
-                      await getImage();
-                    },
-                    child: new Center(
-                      child: _image == null
-                          ? new Stack(
-                              children: <Widget>[
-                                new Center(
-                                  child: new CircleAvatar(
-                                    radius: 80.0,
-                                    backgroundColor: Colors.grey[200],
-                                  ),
+                GestureDetector(
+                  onTap: () async {
+                    FocusScope.of(context).requestFocus(FocusNode());
+                    await getImage();
+                  },
+                  child: Center(
+                    child: _image == null
+                        ? Stack(
+                            children: <Widget>[
+                              Center(
+                                child: CircleAvatar(
+                                  radius: 80.0,
+                                  backgroundColor: Colors.grey[200],
                                 ),
-                                new Center(
-                                  child: Icon(
-                                    Icons.photo_album_outlined,
-                                    size: 120,
-                                  ),
+                              ),
+                              const Center(
+                                child: Icon(
+                                  Icons.photo_album_outlined,
+                                  size: 120,
                                 ),
-                              ],
-                            )
-                          : Padding(
-                              padding: const EdgeInsets.only(top: 30),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  new CircleAvatar(
-                                    radius: 60,
-                                    backgroundColor: Colors.grey[200],
-                                    child: ClipOval(
-                                      child: Align(
-                                        heightFactor: 0.8,
-                                        widthFactor: 2,
-                                        child: Text('Foto'),
-                                      ),
+                              ),
+                            ],
+                          )
+                        : Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                CircleAvatar(
+                                  radius: 60,
+                                  backgroundColor: Colors.grey[200],
+                                  child: const ClipOval(
+                                    child: Align(
+                                      heightFactor: 0.8,
+                                      widthFactor: 2,
+                                      child: Text('Foto'),
                                     ),
                                   ),
-                                  Buttons(
-                                    width: 15,
-                                    text: 'Carregar Foto',
-                                    onPressed: () {},
-                                  )
-                                ],
-                              ),
+                                ),
+                                Buttons(
+                                  width: 15,
+                                  text: 'Carregar Foto',
+                                  onPressed: () {},
+                                )
+                              ],
                             ),
-                    ),
+                          ),
                   ),
                 ),
                 Padding(

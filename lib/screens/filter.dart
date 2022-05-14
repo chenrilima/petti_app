@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 import '../widgets/background.dart';
@@ -10,7 +12,7 @@ class Filter extends StatefulWidget {
 }
 
 class _FilterState extends State<Filter> {
-  var _currencies = [
+  final _currencies = [
     "Food",
     "Transport",
     "Personal",
@@ -39,19 +41,19 @@ class _FilterState extends State<Filter> {
               child: Column(
                 children: [
                   dropdown(hint: 'Tipo'),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   dropdown(hint: 'Especialidade'),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   dropdown(hint: 'Estado'),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   dropdown(hint: 'Cidade'),
-                  SizedBox(
+                  const SizedBox(
                     height: 35,
                   ),
                   Buttons(
@@ -72,8 +74,9 @@ class _FilterState extends State<Filter> {
         return InputDecorator(
           decoration: InputDecoration(
               fillColor: Colors.grey[200],
-              labelStyle: TextStyle(fontSize: 20, color: Colors.black),
-              errorStyle: TextStyle(color: Colors.redAccent, fontSize: 16.0),
+              labelStyle: const TextStyle(fontSize: 20, color: Colors.black),
+              errorStyle:
+                  const TextStyle(color: Colors.redAccent, fontSize: 16.0),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
           isEmpty: _currentSelectedValue == '',

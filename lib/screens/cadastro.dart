@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Cadastro extends StatefulWidget {
+  const Cadastro({Key? key}) : super(key: key);
+
   @override
   _CadastroState createState() => _CadastroState();
 }
@@ -11,42 +13,43 @@ class _CadastroState extends State<Cadastro> {
     return Scaffold(
       body: Form(
         child: ListView(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           children: [
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             TextFormField(
-              decoration: InputDecoration(hintText: "Nome"),
+              decoration: const InputDecoration(hintText: "Nome"),
               // ignore: missing_return
               validator: (text) {
                 // if (text?.isEmpty) return "Preencha!";
               },
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
-              decoration: InputDecoration(hintText: "E-mail"),
+              decoration: const InputDecoration(hintText: "E-mail"),
               // ignore: missing_return
               validator: (text) {
                 // if (text.isEmpty) return "Preencha";
               },
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
-              decoration: InputDecoration(hintText: "Telefone"),
+              decoration: const InputDecoration(hintText: "Telefone"),
               // ignore: missing_return
               validator: (text) {
                 // if (text.isEmpty) return "Preencha";
               },
             ),
-            SizedBox(height: 90.0),
+            const SizedBox(height: 90.0),
             Column(children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xff00C29D),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                    shape: BeveledRectangleBorder(
+                    primary: const Color(0xff00C29D),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 15),
+                    shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                     )),
-                child: Text("Criar Conta"),
+                child: const Text("Criar Conta"),
                 onPressed: () {},
               ),
             ]),

@@ -339,7 +339,7 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Login()),
+                    MaterialPageRoute(builder: (context) => const Login()),
                   );
                 }),
             const SizedBox(
@@ -352,7 +352,7 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Register()),
+                    MaterialPageRoute(builder: (context) => const Register()),
                   );
                 }),
           ],

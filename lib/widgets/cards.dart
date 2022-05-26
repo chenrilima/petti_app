@@ -5,7 +5,8 @@ class ContainerCard extends StatelessWidget {
   double? width;
   double? height;
 
-  ContainerCard({this.content, this.width, this.height});
+  ContainerCard({Key? key, this.content, this.width, this.height})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

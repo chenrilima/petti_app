@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Companies extends StatefulWidget {
@@ -9,7 +8,7 @@ class Companies extends StatefulWidget {
 }
 
 class _CompaniesState extends State<Companies> {
-  bool _checkBox = false;
+  final bool _checkBox = false;
 
   @override
   Widget build(BuildContext context) {

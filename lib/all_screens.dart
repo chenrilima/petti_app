@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petti_app/screens/home.dart';
 import 'package:petti_app/screens/profile.dart';
 import 'package:petti_app/screens/register_company.dart';
@@ -7,6 +8,8 @@ import 'package:petti_app/screens/register_professional.dart';
 import 'package:petti_app/utils/appcolors.dart';
 
 class AllScreens extends StatefulWidget {
+  const AllScreens({Key? key}) : super(key: key);
+
   @override
   _AllScreensState createState() => _AllScreensState();
 }
@@ -17,7 +20,7 @@ class _AllScreensState extends State<AllScreens> {
 
   var pages = [Home(), RegisterProfessional(), RegisterCompany(), Profile()];
 
-  var _appPageController = PageController();
+  final _appPageController = PageController();
 
   setBottomBarIndex(index) {
     setState(() {
@@ -42,9 +45,9 @@ class _AllScreensState extends State<AllScreens> {
         controller: _appPageController,
         children: pages,
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         width: size.width,
-        height: 80.h,
+        height: 80,
         child: Stack(
           //overflow: Overflow.visible,
           children: [
@@ -55,15 +58,16 @@ class _AllScreensState extends State<AllScreens> {
             Center(
               heightFactor: 0.6,
               child: FloatingActionButton(
-                  backgroundColor:
-                      currentIndex == 0 ? AppColors.green : AppColors.grey,
-                  child: const Icon(Icons.search), // Analyze Button
+                  backgroundColor: currentIndex == 0
+                      ? AppColors.green
+                      : AppColors.grey, // Analyze Button
                   elevation: 0.1,
-                  onPressed: () {}),
+                  onPressed: () {},
+                  child: const Icon(Icons.search)),
             ),
-            Container(
+            SizedBox(
               width: size.width,
-              height: 80.h,
+              height: 80,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -131,7 +135,7 @@ class _AllScreensState extends State<AllScreens> {
 class BNBCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = new Paint()
+    Paint paint = Paint()
       ..color = AppColors.white
       ..style = PaintingStyle.fill;
 

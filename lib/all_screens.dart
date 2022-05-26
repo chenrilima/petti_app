@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petti_app/screens/home.dart';
 import 'package:petti_app/screens/profile.dart';
 import 'package:petti_app/screens/register_company.dart';
@@ -48,7 +47,7 @@ class _AllScreensState extends State<AllScreens> {
       ),
       bottomNavigationBar: SizedBox(
         width: size.width,
-        height: 80.h,
+        height: 80,
         child: Stack(
           //overflow: Overflow.visible,
           children: [
@@ -68,7 +67,7 @@ class _AllScreensState extends State<AllScreens> {
             ),
             SizedBox(
               width: size.width,
-              height: 80.h,
+              height: 80,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -136,7 +135,7 @@ class _AllScreensState extends State<AllScreens> {
 class BNBCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = new Paint()
+    Paint paint = Paint()
       ..color = AppColors.white
       ..style = PaintingStyle.fill;
 

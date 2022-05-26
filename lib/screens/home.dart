@@ -123,6 +123,7 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             SizedBox(
@@ -138,11 +139,15 @@ class _HomeState extends State<Home> {
                             Padding(
                               padding: const EdgeInsets.only(top: 41.0),
                               child: Buttons(
-                                width: 15,
-                                heigth: 10,
-                                text: 'Entrar em contato',
-                                onPressed: () => _showDialog(),
-                              ),
+                                  width: 15,
+                                  heigth: 10,
+                                  text: 'Entrar em contato',
+                                  onPressed: () {
+                                    Future.delayed(const Duration(seconds: 3),
+                                        () {
+                                      _showDialog();
+                                    });
+                                  }),
                             )
                           ],
                         )
@@ -311,7 +316,6 @@ class _HomeState extends State<Home> {
   }
 
   void _showDialog() {
-    // flutter defined function
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -321,13 +325,15 @@ class _HomeState extends State<Home> {
           content: SizedBox(
             width: 270,
             height: 220,
-            child: Column(
-              children: [
-                Image.asset(
-                  "images/img-perfil.png",
-                  fit: BoxFit.cover,
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.asset(
+                    "images/img-perfil.png",
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
             ),
           ),
           actions: <Widget>[
@@ -337,10 +343,10 @@ class _HomeState extends State<Home> {
                 heigth: 10,
                 text: 'Entrar',
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Login()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const Login()),
+                  // );
                 }),
             const SizedBox(
               width: 5,
@@ -350,10 +356,10 @@ class _HomeState extends State<Home> {
                 heigth: 10,
                 text: 'Cadastrar',
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Register()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const Register()),
+                  // );
                 }),
           ],
         );

@@ -12,7 +12,7 @@ void main() {
           create: (_) => Param(),
         ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: AllScreens(),
       ),

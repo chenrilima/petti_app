@@ -4,8 +4,8 @@ import 'package:petti_app/screens/register.dart';
 
 import 'package:provider/provider.dart';
 
-import '../utils/appcolors.dart';
-import '../utils/appfonts.dart';
+import '../theme/appcolors.dart';
+import '../theme/appfonts.dart';
 import '../utils/param.dart';
 import '../widgets/background.dart';
 import '../widgets/buttons.dart';

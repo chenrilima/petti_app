@@ -5,7 +5,7 @@ import 'package:petti_app/screens/home.dart';
 import 'package:petti_app/screens/profile.dart';
 import 'package:petti_app/screens/register_company.dart';
 import 'package:petti_app/screens/register_professional.dart';
-import 'package:petti_app/utils/appcolors.dart';
+import 'package:petti_app/theme/appcolors.dart';
 
 class AllScreens extends StatefulWidget {
   const AllScreens({Key? key}) : super(key: key);

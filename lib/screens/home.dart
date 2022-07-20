@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petti_app/screens/register.dart';
+import 'package:petti_app/theme/app_styles.dart';
+import 'package:petti_app/theme/app_theme.dart';
 
 import 'package:provider/provider.dart';
 
-import '../theme/appcolors.dart';
-import '../theme/appfonts.dart';
 import '../utils/param.dart';
 import '../widgets/background.dart';
 import '../widgets/buttons.dart';
@@ -13,7 +12,6 @@ import '../widgets/cards.dart';
 
 import 'company_professional.dart';
 import 'filter.dart';
-import 'login.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -43,7 +41,7 @@ class _HomeState extends State<Home> {
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w400,
                   fontSize: 24,
-                  color: AppColors.white,
+                  color: AppTheme.colors.white,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -63,7 +61,7 @@ class _HomeState extends State<Home> {
                   style: GoogleFonts.roboto(
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
-                    color: AppColors.white,
+                    color: AppTheme.colors.white,
                   ),
                 )
               ],
@@ -117,7 +115,12 @@ class _HomeState extends State<Home> {
                                 '\nCRMV - 1234-5'
                                 '\nClinica Geral Ortopedista'
                                 '\nSão Bernado do Campo - SP',
-                                style: AppFonts.f12w400black,
+                                style: AppTheme.textStyles.styleText(
+                                  TypeFont.barlowRegular,
+                                  AppTheme.colors.white,
+                                  16,
+                                  FontWeight.w400,
+                                ),
                               ),
                             )
                           ],
@@ -133,7 +136,7 @@ class _HomeState extends State<Home> {
                                   style: GoogleFonts.roboto(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
-                                    color: AppColors.black,
+                                    color: AppTheme.colors.black,
                                   ),
                                 )),
                             Padding(
@@ -202,7 +205,7 @@ class _HomeState extends State<Home> {
                                 style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 12,
-                                  color: AppColors.black,
+                                  color: AppTheme.colors.black,
                                 ),
                               ),
                             )
@@ -219,7 +222,7 @@ class _HomeState extends State<Home> {
                                   style: GoogleFonts.roboto(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
-                                    color: AppColors.black,
+                                    color: AppTheme.colors.black,
                                   ),
                                 )),
                             Padding(
@@ -273,7 +276,7 @@ class _HomeState extends State<Home> {
                               style: GoogleFonts.roboto(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 12,
-                                color: AppColors.black,
+                                color: AppTheme.colors.black,
                               ),
                             ),
                           )
@@ -290,7 +293,7 @@ class _HomeState extends State<Home> {
                                 style: GoogleFonts.roboto(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 10,
-                                  color: AppColors.black,
+                                  color: AppTheme.colors.black,
                                 ),
                               )),
                           Padding(

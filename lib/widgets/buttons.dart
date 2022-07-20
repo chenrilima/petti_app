@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../theme/appcolors.dart';
+import 'package:petti_app/theme/app_theme.dart';
 
 class Buttons extends StatelessWidget {
   Function onPressed;
@@ -21,7 +20,7 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          primary: AppColors.green, // background
+          primary: AppTheme.colors.green, // background
           onPrimary: Colors.white, // foreground
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
@@ -29,7 +28,7 @@ class Buttons extends StatelessWidget {
           textStyle: GoogleFonts.roboto(
             fontWeight: FontWeight.w400,
             fontSize: 14,
-            color: AppColors.white,
+            color: AppTheme.colors.white,
           )),
       onPressed: onPressed(),
       child: Text(text!),

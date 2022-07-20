@@ -5,7 +5,7 @@ import 'package:petti_app/screens/home.dart';
 import 'package:petti_app/screens/profile.dart';
 import 'package:petti_app/screens/register_company.dart';
 import 'package:petti_app/screens/register_professional.dart';
-import 'package:petti_app/theme/appcolors.dart';
+import 'package:petti_app/theme/app_theme.dart';
 
 class AllScreens extends StatefulWidget {
   const AllScreens({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class _AllScreensState extends State<AllScreens> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColors.white,
+      backgroundColor: AppTheme.colors.white,
       body: PageView(
         scrollDirection: Axis.horizontal,
         onPageChanged: (index) {
@@ -59,8 +59,8 @@ class _AllScreensState extends State<AllScreens> {
               heightFactor: 0.6,
               child: FloatingActionButton(
                   backgroundColor: currentIndex == 0
-                      ? AppColors.green
-                      : AppColors.grey, // Analyze Button
+                      ? AppTheme.colors.green
+                      : AppTheme.colors.grey, // Analyze Button
                   elevation: 0.1,
                   onPressed: () {},
                   child: const Icon(Icons.search)),
@@ -74,8 +74,9 @@ class _AllScreensState extends State<AllScreens> {
                   IconButton(
                     icon: Icon(
                       Icons.home,
-                      color:
-                          currentIndex == 0 ? AppColors.green : AppColors.grey,
+                      color: currentIndex == 0
+                          ? AppTheme.colors.green
+                          : AppTheme.colors.grey,
                     ),
                     onPressed: () {
                       setBottomBarIndex(0);
@@ -86,8 +87,8 @@ class _AllScreensState extends State<AllScreens> {
                       icon: Icon(
                         Icons.article,
                         color: currentIndex == 1
-                            ? AppColors.green
-                            : AppColors.grey,
+                            ? AppTheme.colors.green
+                            : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(1);
@@ -99,8 +100,8 @@ class _AllScreensState extends State<AllScreens> {
                       icon: Icon(
                         Icons.business,
                         color: currentIndex == 2
-                            ? AppColors.green
-                            : AppColors.grey,
+                            ? AppTheme.colors.green
+                            : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(2);
@@ -109,8 +110,8 @@ class _AllScreensState extends State<AllScreens> {
                       icon: Icon(
                         Icons.person,
                         color: currentIndex == 3
-                            ? AppColors.green
-                            : AppColors.grey,
+                            ? AppTheme.colors.green
+                            : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(3);
@@ -136,7 +137,7 @@ class BNBCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
-      ..color = AppColors.white
+      ..color = AppTheme.colors.white
       ..style = PaintingStyle.fill;
 
     Path path = Path();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petti_app/theme/app_theme.dart';
 
-import '../theme/appcolors.dart';
 import '../widgets/background.dart';
 import '../widgets/cards.dart';
 
@@ -64,7 +64,7 @@ class _ProfileState extends State<Profile> {
               style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
-                color: AppColors.black,
+                color: AppTheme.colors.black,
               ),
             ),
           ],

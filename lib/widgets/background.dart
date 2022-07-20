@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../theme/appcolors.dart';
+import 'package:petti_app/theme/app_theme.dart';
 
 class Background extends StatelessWidget {
   String title;
@@ -16,7 +15,7 @@ class Background extends StatelessWidget {
     double widscreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        color: AppColors.green,
+        color: AppTheme.colors.green,
         height: widscreen * 1,
         padding: const EdgeInsets.only(top: 50, left: 10, right: 10),
         child: SingleChildScrollView(
@@ -29,9 +28,9 @@ class Background extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: AppColors.white,
+                        color: AppTheme.colors.white,
                         border: Border.all(
-                          color: AppColors.white,
+                          color: AppTheme.colors.white,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(90))),
                     child: Image.asset(
@@ -48,7 +47,7 @@ class Background extends StatelessWidget {
                           style: GoogleFonts.roboto(
                             fontWeight: FontWeight.w400,
                             fontSize: 24,
-                            color: AppColors.white,
+                            color: AppTheme.colors.white,
                           ),
                         )),
                   )

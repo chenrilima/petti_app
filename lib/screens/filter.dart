@@ -1,10 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-
-import '../widgets/background.dart';
-import '../widgets/buttons.dart';
-import '../widgets/cards.dart';
+import 'package:petti_app/controller/controller.dart';
+import 'package:petti_app/widgets/background.dart';
+import 'package:petti_app/widgets/buttons.dart';
+import 'package:petti_app/widgets/cards.dart';
 
 class Filter extends StatefulWidget {
   @override
@@ -12,21 +12,7 @@ class Filter extends StatefulWidget {
 }
 
 class _FilterState extends State<Filter> {
-  final _currencies = [
-    "Food",
-    "Transport",
-    "Personal",
-    "Shopping",
-    "Medical",
-    "Rent",
-    "Movie",
-    "Salary"
-  ];
-
-  var _currentSelectedValue;
-
-  late String _selectedValue;
-  List<String> listOfValue = ['1', '2', '3', '4', '5'];
+  final Controller _controller = Controller();
 
   @override
   Widget build(BuildContext context) {
@@ -79,19 +65,20 @@ class _FilterState extends State<Filter> {
                   const TextStyle(color: Colors.redAccent, fontSize: 16.0),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-          isEmpty: _currentSelectedValue == '',
+          isEmpty: _controller.controllerFilter.currentSelectedValue == '',
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
-              value: _currentSelectedValue,
+              value: _controller.controllerFilter.currentSelectedValue,
               hint: Text(hint),
               isDense: true,
               onChanged: (String? newValue) {
                 setState(() {
-                  _currentSelectedValue = newValue;
+                  _controller.controllerFilter.currentSelectedValue = newValue;
                   state.didChange(newValue);
                 });
               },
-              items: _currencies.map((String value) {
+              items:
+                  _controller.controllerFilter.currencies.map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),

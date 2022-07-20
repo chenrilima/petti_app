@@ -8,7 +8,8 @@ class Background extends StatelessWidget {
   String title;
   Widget content;
 
-  Background({this.title = "", required this.content});
+  Background({Key? key, this.title = "", required this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

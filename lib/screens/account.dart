@@ -31,10 +31,6 @@ class _AccountState extends State<Account> {
                   Padding(
                     padding: const EdgeInsets.only(top: 16, bottom: 10),
                     child: RaisedButton(
-                      child: const Text(
-                        "Criar Conta",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
                       color: const Color(0xff00C29D),
                       padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                       shape: RoundedRectangleBorder(
@@ -43,24 +39,29 @@ class _AccountState extends State<Account> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Cadastro()),
+                          MaterialPageRoute(
+                              builder: (context) => const Cadastro()),
                         );
                       },
+                      child: const Text(
+                        "Criar Conta",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 16, bottom: 10),
                     child: RaisedButton(
-                      child: const Text(
-                        "Entrar",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
                       color: const Color(0xff00C29D),
                       padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                       onPressed: () {},
+                      child: const Text(
+                        "Entrar",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
                     ),
                   ),
                 ]),

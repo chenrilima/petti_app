@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:petti_app/screens/home.dart';
-import 'package:petti_app/screens/profile.dart';
-import 'package:petti_app/screens/register_company.dart';
-import 'package:petti_app/screens/register_professional.dart';
+import 'package:petti_app/controller/controller.dart';
+
 import 'package:petti_app/theme/app_theme.dart';
 
 class AllScreens extends StatefulWidget {
@@ -15,18 +13,13 @@ class AllScreens extends StatefulWidget {
 }
 
 class _AllScreensState extends State<AllScreens> {
-  int currentIndex = 0;
-  String result = "";
-
-  var pages = [Home(), RegisterProfessional(), RegisterCompany(), Profile()];
-
-  final _appPageController = PageController();
+  final Controller _controller = Controller();
 
   setBottomBarIndex(index) {
     setState(() {
-      currentIndex = index;
+      _controller.controllerAllScreens.currentIndex = index;
     });
-    _appPageController.animateToPage(index,
+    _controller.controllerAllScreens.appPageController.animateToPage(index,
         duration: const Duration(milliseconds: 700), curve: Curves.ease);
   }
 
@@ -39,11 +32,11 @@ class _AllScreensState extends State<AllScreens> {
         scrollDirection: Axis.horizontal,
         onPageChanged: (index) {
           setState(() {
-            currentIndex = index;
+            _controller.controllerAllScreens.currentIndex = index;
           });
         },
-        controller: _appPageController,
-        children: pages,
+        controller: _controller.controllerAllScreens.appPageController,
+        children: _controller.controllerAllScreens.pages,
       ),
       bottomNavigationBar: SizedBox(
         width: size.width,
@@ -58,9 +51,10 @@ class _AllScreensState extends State<AllScreens> {
             Center(
               heightFactor: 0.6,
               child: FloatingActionButton(
-                  backgroundColor: currentIndex == 0
-                      ? AppTheme.colors.green
-                      : AppTheme.colors.grey, // Analyze Button
+                  backgroundColor:
+                      _controller.controllerAllScreens.currentIndex == 0
+                          ? AppTheme.colors.green
+                          : AppTheme.colors.grey, // Analyze Button
                   elevation: 0.1,
                   onPressed: () {},
                   child: const Icon(Icons.search)),
@@ -74,7 +68,7 @@ class _AllScreensState extends State<AllScreens> {
                   IconButton(
                     icon: Icon(
                       Icons.home,
-                      color: currentIndex == 0
+                      color: _controller.controllerAllScreens.currentIndex == 0
                           ? AppTheme.colors.green
                           : AppTheme.colors.grey,
                     ),
@@ -86,9 +80,10 @@ class _AllScreensState extends State<AllScreens> {
                   IconButton(
                       icon: Icon(
                         Icons.article,
-                        color: currentIndex == 1
-                            ? AppTheme.colors.green
-                            : AppTheme.colors.grey,
+                        color:
+                            _controller.controllerAllScreens.currentIndex == 1
+                                ? AppTheme.colors.green
+                                : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(1);
@@ -99,9 +94,10 @@ class _AllScreensState extends State<AllScreens> {
                   IconButton(
                       icon: Icon(
                         Icons.business,
-                        color: currentIndex == 2
-                            ? AppTheme.colors.green
-                            : AppTheme.colors.grey,
+                        color:
+                            _controller.controllerAllScreens.currentIndex == 2
+                                ? AppTheme.colors.green
+                                : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(2);
@@ -109,9 +105,10 @@ class _AllScreensState extends State<AllScreens> {
                   IconButton(
                       icon: Icon(
                         Icons.person,
-                        color: currentIndex == 3
-                            ? AppTheme.colors.green
-                            : AppTheme.colors.grey,
+                        color:
+                            _controller.controllerAllScreens.currentIndex == 3
+                                ? AppTheme.colors.green
+                                : AppTheme.colors.grey,
                       ),
                       onPressed: () {
                         setBottomBarIndex(3);
@@ -127,9 +124,9 @@ class _AllScreensState extends State<AllScreens> {
 
   void _onTappedBar(int value) {
     setState(() {
-      currentIndex = value;
+      _controller.controllerAllScreens.currentIndex = value;
     });
-    _appPageController.jumpToPage(value);
+    _controller.controllerAllScreens.appPageController.jumpToPage(value);
   }
 }
 

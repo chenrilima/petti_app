@@ -67,10 +67,8 @@ class _HomeState extends State<Home> {
               ],
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Filter()),
-              );
+              AppNavigation.navigateToNamed(
+                  context, "/filter", NavigationType.pushNamedAndRemoveUntil);
             },
           ),
           Column(
@@ -80,11 +78,8 @@ class _HomeState extends State<Home> {
                   setState(() {
                     param.company = false;
                   });
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const CompanyProfessional()),
-                  );
+                  AppNavigation.navigateToNamed(context, "/companyProfessional",
+                      NavigationType.pushNamedAndRemoveUntil);
                 },
                 child: ContainerCard(
                   width: widscreen * 1,
@@ -167,11 +162,8 @@ class _HomeState extends State<Home> {
                   setState(() {
                     param.company = true;
                   });
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const CompanyProfessional()),
-                  );
+                  AppNavigation.navigateToNamed(context, "/companyProfessional",
+                      NavigationType.pushNamedAndRemoveUntil);
                 },
                 child: ContainerCard(
                   width: widscreen * 1,
@@ -346,10 +338,8 @@ class _HomeState extends State<Home> {
                 heigth: 10,
                 text: 'Entrar',
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const Login()),
-                  // );
+                  AppNavigation.navigateToNamed(context, "/login",
+                      NavigationType.pushNamedAndRemoveUntil);
                 }),
             const SizedBox(
               width: 5,
@@ -359,10 +349,8 @@ class _HomeState extends State<Home> {
                 heigth: 10,
                 text: 'Cadastrar',
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const Register()),
-                  // );
+                  AppNavigation.navigateToNamed(context, "/register",
+                      NavigationType.pushNamedAndRemoveUntil);
                 }),
           ],
         );

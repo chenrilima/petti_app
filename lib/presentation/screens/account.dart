@@ -39,11 +39,8 @@ class _AccountState extends State<Account> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Cadastro()),
-                        );
+                        AppNavigation.navigateToNamed(context, "/register",
+                            NavigationType.pushNamedAndRemoveUntil);
                       },
                       child: Text(
                         "Criar Conta",

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
+import 'package:petti_app/theme/app_styles.dart';
 
 import 'cadastro.dart';
 
@@ -23,7 +25,7 @@ class _AccountState extends State<Account> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: Image.asset(
-                      "images/pawdogicon.png",
+                      AppTheme.images.pawDog,
                       width: 60,
                       height: 150,
                     ),
@@ -43,9 +45,14 @@ class _AccountState extends State<Account> {
                               builder: (context) => const Cadastro()),
                         );
                       },
-                      child: const Text(
+                      child: Text(
                         "Criar Conta",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: AppTheme.textStyles.styleText(
+                          TypeFont.barlowBold,
+                          AppTheme.colors.white,
+                          16,
+                          FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),
@@ -58,9 +65,14 @@ class _AccountState extends State<Account> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         "Entrar",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: AppTheme.textStyles.styleText(
+                          TypeFont.barlowBold,
+                          AppTheme.colors.white,
+                          20,
+                          FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),

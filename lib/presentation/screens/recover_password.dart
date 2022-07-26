@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/background.dart';
-import '../widgets/buttons.dart';
-import '../widgets/cards.dart';
-import '../widgets/text_formfield.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/buttons.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
+import 'package:petti_app/presentation/widgets/text_formfield.dart';
 
 class RecoverPassword extends StatefulWidget {
   const RecoverPassword({Key? key}) : super(key: key);

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/routes/routes_names.dart';
+import 'package:petti_app/utils/param.dart';
 import 'package:provider/provider.dart';
-
-import 'all_screens.dart';
-import 'utils/param.dart';
 
 void main() {
   runApp(
@@ -12,9 +11,10 @@ void main() {
           create: (_) => Param(),
         ),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: AllScreens(),
+        initialRoute: "/allScreens",
+        routes: RoutesName.routesName(),
       ),
     ),
   );

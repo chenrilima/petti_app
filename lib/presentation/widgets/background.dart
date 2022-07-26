@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:petti_app/theme/app_theme.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
 
 class Background extends StatelessWidget {
   String title;
@@ -45,10 +44,11 @@ class Background extends StatelessWidget {
                         width: 262,
                         child: Text(
                           title,
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 24,
-                            color: AppTheme.colors.white,
+                          style: AppTheme.textStyles.styleText(
+                            TypeFont.barlowBold,
+                            AppTheme.colors.white,
+                            24,
+                            FontWeight.w400,
                           ),
                         )),
                   )

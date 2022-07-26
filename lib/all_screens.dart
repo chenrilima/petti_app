@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:petti_app/controller/controller.dart';
 
-import 'package:petti_app/theme/app_theme.dart';
+import 'presentation/theme/app_theme.dart';
 
 class AllScreens extends StatefulWidget {
   const AllScreens({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:petti_app/screens/home.dart';
-import 'package:petti_app/screens/profile.dart';
-import 'package:petti_app/screens/register_company.dart';
-import 'package:petti_app/screens/register_professional.dart';
+import 'package:petti_app/presentation/screens/home.dart';
+import 'package:petti_app/presentation/screens/profile.dart';
+import 'package:petti_app/presentation/screens/register_company.dart';
+import 'package:petti_app/presentation/screens/register_professional.dart';
 
 class ControllerAllScreens {
   int currentIndex = 0;

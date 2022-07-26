@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:petti_app/theme/app_theme.dart';
-
-import '../widgets/background.dart';
-import '../widgets/cards.dart';
+import 'package:petti_app/presentation/theme/app_styles.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
+import 'package:petti_app/widgets/background.dart';
+import 'package:petti_app/widgets/cards.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -61,10 +60,11 @@ class _ProfileState extends State<Profile> {
             ),
             Text(
               text!,
-              style: GoogleFonts.roboto(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                color: AppTheme.colors.black,
+              style: AppTheme.textStyles.styleText(
+                TypeFont.barlowBold,
+                AppTheme.colors.black,
+                16,
+                FontWeight.w400,
               ),
             ),
           ],

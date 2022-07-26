@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:petti_app/controller/controller.dart';
-import 'package:petti_app/widgets/background.dart';
-import 'package:petti_app/widgets/buttons.dart';
-import 'package:petti_app/widgets/cards.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/buttons.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
 
 class Filter extends StatefulWidget {
   @override

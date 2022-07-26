@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/buttons.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
+import 'package:petti_app/presentation/widgets/text_formfield.dart';
 
-import '../widgets/background.dart';
-import '../widgets/buttons.dart';
-import '../widgets/cards.dart';
-import '../widgets/text_formfield.dart';
-
-class RegisterProfessional extends StatefulWidget {
-  const RegisterProfessional({Key? key}) : super(key: key);
+class RegisterCompany extends StatefulWidget {
+  const RegisterCompany({Key? key}) : super(key: key);
 
   @override
-  _RegisterProfessionalState createState() => _RegisterProfessionalState();
+  _RegisterCompanyState createState() => _RegisterCompanyState();
 }
 
-class _RegisterProfessionalState extends State<RegisterProfessional> {
+class _RegisterCompanyState extends State<RegisterCompany> {
   final _image = true;
 
   @override
   Widget build(BuildContext context) {
     double widscreen = MediaQuery.of(context).size.width;
     return Background(
-      title: 'Você esta á um passo de encontrar o emprego dos seus sonhos',
+      title:
+          'Você esta a um passo de encontrar os melhor funcionários para sua empresa',
       content: Padding(
         padding: const EdgeInsets.only(top: 20.0),
         child: ContainerCard(
@@ -29,11 +29,7 @@ class _RegisterProfessionalState extends State<RegisterProfessional> {
             child: Column(
               children: [
                 TextFormFields(
-                  hintText: 'CRMV',
-                  onChanged: () {},
-                ),
-                TextFormFields(
-                  hintText: 'Especialidades',
+                  hintText: 'Nome da empresa',
                   onChanged: () {},
                 ),
                 TextFormFields(
@@ -41,19 +37,27 @@ class _RegisterProfessionalState extends State<RegisterProfessional> {
                   onChanged: () {},
                 ),
                 TextFormFields(
-                  hintText: 'Gênero',
+                  hintText: 'Endereço',
                   onChanged: () {},
                 ),
                 TextFormFields(
-                  hintText: 'Cidade',
+                  hintText: 'Segmento de atuação',
                   onChanged: () {},
                 ),
                 TextFormFields(
-                  hintText: 'Estado',
+                  hintText: 'Serviços prestados',
                   onChanged: () {},
                 ),
                 TextFormFields(
-                  hintText: 'Breve descrição sobre seu perfil e objetivos',
+                  hintText: 'Horário de atendimento',
+                  onChanged: () {},
+                ),
+                TextFormFields(
+                  hintText: 'Site / Redes sociais',
+                  onChanged: () {},
+                ),
+                TextFormFields(
+                  hintText: 'Breve descrição da vaga',
                   onChanged: () {},
                 ),
                 GestureDetector(
@@ -108,8 +112,8 @@ class _RegisterProfessionalState extends State<RegisterProfessional> {
                 Padding(
                   padding: const EdgeInsets.only(top: 29),
                   child: Buttons(
-                    width: 100,
-                    text: 'Cadastrar CV',
+                    width: 90,
+                    text: 'Cadastrar Vaga',
                     onPressed: () {},
                   ),
                 ),

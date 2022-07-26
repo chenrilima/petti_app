@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:petti_app/screens/recover_password.dart';
-
-import '../widgets/background.dart';
-import '../widgets/buttons.dart';
-import '../widgets/cards.dart';
-import '../widgets/text_formfield.dart';
+import 'package:petti_app/presentation/screens/recover_password.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/buttons.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
+import 'package:petti_app/presentation/widgets/text_formfield.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

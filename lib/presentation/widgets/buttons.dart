@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_styles.dart';
 import 'package:petti_app/presentation/theme/app_theme.dart';
 
 class Buttons extends StatelessWidget {

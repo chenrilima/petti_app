@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:petti_app/presentation/routes/app_navigator.dart';
+import 'package:petti_app/presentation/theme/app_styles.dart';
+
 import 'package:petti_app/presentation/theme/app_theme.dart';
-import 'package:petti_app/theme/app_styles.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/buttons.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
+
 import 'package:petti_app/utils/param.dart';
-import 'package:petti_app/widgets/background.dart';
-import 'package:petti_app/widgets/buttons.dart';
-
-import 'package:petti_app/widgets/cards.dart';
-
 import 'package:provider/provider.dart';
-
-import 'company_professional.dart';
-import 'filter.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -38,10 +35,11 @@ class _HomeState extends State<Home> {
             child: Center(
               child: Text(
                 'BEM VINDO A MAIOR PLATAFORMA DE EMPREGO PET DO BR',
-                style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 24,
-                  color: AppTheme.colors.white,
+                style: AppTheme.textStyles.styleText(
+                  TypeFont.barlowBold,
+                  AppTheme.colors.white,
+                  24,
+                  FontWeight.w400,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -58,10 +56,11 @@ class _HomeState extends State<Home> {
                 ),
                 Text(
                   'Filtrar',
-                  style: GoogleFonts.roboto(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 14,
-                    color: AppTheme.colors.white,
+                  style: AppTheme.textStyles.styleText(
+                    TypeFont.barlowBold,
+                    AppTheme.colors.white,
+                    14,
+                    FontWeight.w400,
                   ),
                 )
               ],
@@ -128,10 +127,11 @@ class _HomeState extends State<Home> {
                                 width: 175,
                                 child: Text(
                                   'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
-                                  style: GoogleFonts.roboto(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 10,
-                                    color: AppTheme.colors.black,
+                                  style: AppTheme.textStyles.styleText(
+                                    TypeFont.barlowBold,
+                                    AppTheme.colors.black,
+                                    10,
+                                    FontWeight.w400,
                                   ),
                                 )),
                             Padding(
@@ -194,10 +194,11 @@ class _HomeState extends State<Home> {
                                 '\nEndereço'
                                 '\nServiços prestados'
                                 '\nHorario de atendimento',
-                                style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 12,
-                                  color: AppTheme.colors.black,
+                                style: AppTheme.textStyles.styleText(
+                                  TypeFont.barlowBold,
+                                  AppTheme.colors.black,
+                                  12,
+                                  FontWeight.w400,
                                 ),
                               ),
                             )
@@ -211,10 +212,11 @@ class _HomeState extends State<Home> {
                                 width: 175,
                                 child: Text(
                                   'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
-                                  style: GoogleFonts.roboto(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 10,
-                                    color: AppTheme.colors.black,
+                                  style: AppTheme.textStyles.styleText(
+                                    TypeFont.barlowBold,
+                                    AppTheme.colors.white,
+                                    10,
+                                    FontWeight.w400,
                                   ),
                                 )),
                             Padding(
@@ -265,10 +267,11 @@ class _HomeState extends State<Home> {
                               '\nCRMV - 1234-5'
                               '\nClinica Geral Ortopedista'
                               '\nSão Bernado do Campo - SP',
-                              style: GoogleFonts.roboto(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                color: AppTheme.colors.black,
+                              style: AppTheme.textStyles.styleText(
+                                TypeFont.barlowBold,
+                                AppTheme.colors.black,
+                                12,
+                                FontWeight.w400,
                               ),
                             ),
                           )
@@ -282,10 +285,11 @@ class _HomeState extends State<Home> {
                               width: 175,
                               child: Text(
                                 'Bla sobre a pessoa, uma descrição curta sobre suas competências.',
-                                style: GoogleFonts.roboto(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                  color: AppTheme.colors.black,
+                                style: AppTheme.textStyles.styleText(
+                                  TypeFont.barlowBold,
+                                  AppTheme.colors.white,
+                                  10,
+                                  FontWeight.w400,
                                 ),
                               )),
                           Padding(

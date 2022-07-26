@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:petti_app/presentation/theme/app_styles.dart';
 import 'package:petti_app/presentation/theme/app_theme.dart';
-import 'package:petti_app/widgets/background.dart';
-import 'package:petti_app/widgets/cards.dart';
+import 'package:petti_app/presentation/widgets/background.dart';
+import 'package:petti_app/presentation/widgets/cards.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);

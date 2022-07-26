@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/routes/app_navigator.dart';
+import 'package:petti_app/presentation/theme/app_styles.dart';
 import 'package:petti_app/presentation/theme/app_theme.dart';
-import 'package:petti_app/theme/app_styles.dart';
-
-import 'cadastro.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);

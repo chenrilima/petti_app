@@ -50,7 +50,7 @@ class HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/images/filter.png",
+                  AppTheme.images.filter,
                   width: 50,
                   height: 50,
                 ),
@@ -96,7 +96,7 @@ class HomeState extends State<Home> {
                               width: 110,
                               height: 50,
                               child: Image.asset(
-                                "assets/images/womam.png",
+                                AppTheme.images.woman,
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -181,7 +181,7 @@ class HomeState extends State<Home> {
                               width: 110,
                               height: 50,
                               child: Image.asset(
-                                "assets/images/vetlife.png",
+                                AppTheme.images.vetLife,
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -254,7 +254,7 @@ class HomeState extends State<Home> {
                             width: 110,
                             height: 50,
                             child: Image.asset(
-                              "assets/images/womam.png",
+                              AppTheme.images.woman,
                               fit: BoxFit.contain,
                             ),
                           ),

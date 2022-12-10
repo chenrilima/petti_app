@@ -15,6 +15,7 @@ class Background extends StatelessWidget {
   Widget build(BuildContext context) {
     double widscreen = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: AppTheme.colors.green,
       body: Container(
         color: AppTheme.colors.green,
         height: widscreen * 1,
@@ -35,7 +36,7 @@ class Background extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(90))),
                     child: Image.asset(
-                      "assets/images/pawdogicon.png",
+                      AppTheme.images.pawDog,
                       width: 50,
                       height: 50,
                     ),

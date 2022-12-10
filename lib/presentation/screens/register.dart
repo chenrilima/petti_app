@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
 import 'package:petti_app/presentation/widgets/background.dart';
 import 'package:petti_app/presentation/widgets/buttons.dart';
 import 'package:petti_app/presentation/widgets/cards.dart';
@@ -32,7 +33,7 @@ class RegisterState extends State<Register> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "images/pawdogicon.png",
+                        AppTheme.images.pawDog,
                         width: 84,
                         height: 84,
                       ),
@@ -120,14 +121,14 @@ class RegisterState extends State<Register> {
                     children: [
                       GestureDetector(
                         child: Image.asset(
-                          "images/facebook.png",
+                          AppTheme.images.facebook,
                           width: 50,
                           height: 50,
                         ),
                       ),
                       GestureDetector(
                         child: Image.asset(
-                          "images/google.png",
+                          AppTheme.images.google,
                           width: 50,
                           height: 50,
                         ),

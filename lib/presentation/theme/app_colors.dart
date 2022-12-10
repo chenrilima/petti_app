@@ -28,5 +28,5 @@ class AppColorsTheme implements AppColors {
   Color get transparent => const Color(0x00000000);
 
   @override
-  Color get green => const Color.fromARGB(255, 9, 9, 9);
+  Color get green => const Color(0xff40E0D0);
 }

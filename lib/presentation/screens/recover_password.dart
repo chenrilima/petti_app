@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
 import 'package:petti_app/presentation/widgets/background.dart';
 import 'package:petti_app/presentation/widgets/buttons.dart';
 import 'package:petti_app/presentation/widgets/cards.dart';
@@ -30,7 +31,7 @@ class RecoverPasswordState extends State<RecoverPassword> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "images/pawdogicon.png",
+                        AppTheme.images.pawDog,
                         width: 84,
                         height: 84,
                       ),

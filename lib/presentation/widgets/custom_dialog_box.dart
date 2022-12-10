@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
 
 import 'constants.dart';
 
@@ -84,9 +85,10 @@ class CustomDialogBoxState extends State<CustomDialogBox> {
             backgroundColor: Colors.transparent,
             radius: Constants.avatarRadius,
             child: ClipRRect(
-                borderRadius: const BorderRadius.all(
-                    Radius.circular(Constants.avatarRadius)),
-                child: Image.asset("images/pawdogicon.png")),
+              borderRadius: const BorderRadius.all(
+                  Radius.circular(Constants.avatarRadius)),
+              child: Image.asset(AppTheme.images.pawDog),
+            ),
           ),
         ),
       ],

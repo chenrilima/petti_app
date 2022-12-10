@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petti_app/presentation/theme/app_theme.dart';
 import 'package:petti_app/presentation/widgets/background.dart';
 import 'package:petti_app/presentation/widgets/buttons.dart';
 import 'package:petti_app/presentation/widgets/cards.dart';
@@ -29,8 +30,8 @@ class CompanyProfessionalState extends State<CompanyProfessional> {
               children: [
                 Image.asset(
                   param.company == true
-                      ? "images/img-company.png"
-                      : "images/img-professional.png",
+                      ? AppTheme.images.company
+                      : AppTheme.images.professional,
                   width: 217,
                   height: 153,
                 ),

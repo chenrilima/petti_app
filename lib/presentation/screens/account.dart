@@ -19,60 +19,73 @@ class _AccountState extends State<Account> {
         child: Center(
           child: SingleChildScrollView(
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
-                    child: Image.asset(
-                      AppTheme.images.pawDog,
-                      width: 60,
-                      height: 150,
-                    ),
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Image.asset(
+                    AppTheme.images.pawDog,
+                    width: 60,
+                    height: 150,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16, bottom: 10),
-                    child: RaisedButton(
-                      color: const Color(0xff00C29D),
-                      padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 16, bottom: 10),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                        const Color(0xff00C29D),
                       ),
-                      onPressed: () {
-                        AppNavigation.navigateToNamed(context, "/register",
-                            NavigationType.pushNamedAndRemoveUntil);
-                      },
-                      child: Text(
-                        "Criar Conta",
-                        style: AppTheme.textStyles.styleText(
-                          TypeFont.barlowBold,
-                          AppTheme.colors.white,
-                          16,
-                          FontWeight.w400,
-                        ),
+                      padding: MaterialStateProperty.all(
+                        const EdgeInsets.fromLTRB(32, 16, 32, 16),
+                      ),
+                      textStyle: MaterialStateProperty.all(
+                        const TextStyle(fontSize: 30),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16, bottom: 10),
-                    child: RaisedButton(
-                      color: const Color(0xff00C29D),
-                      padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Entrar",
-                        style: AppTheme.textStyles.styleText(
-                          TypeFont.barlowBold,
-                          AppTheme.colors.white,
-                          20,
-                          FontWeight.w400,
-                        ),
+                    onPressed: () {
+                      AppNavigation.navigateToNamed(context, "/register",
+                          NavigationType.pushNamedAndRemoveUntil);
+                    },
+                    child: Text(
+                      "Criar Conta",
+                      style: AppTheme.textStyles.styleText(
+                        TypeFont.barlowBold,
+                        AppTheme.colors.white,
+                        16,
+                        FontWeight.w400,
                       ),
                     ),
                   ),
-                ]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 16, bottom: 10),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                        const Color(0xff00C29D),
+                      ),
+                      padding: MaterialStateProperty.all(
+                        const EdgeInsets.fromLTRB(32, 16, 32, 16),
+                      ),
+                      textStyle: MaterialStateProperty.all(
+                        const TextStyle(fontSize: 30),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "Entrar",
+                      style: AppTheme.textStyles.styleText(
+                        TypeFont.barlowBold,
+                        AppTheme.colors.white,
+                        20,
+                        FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

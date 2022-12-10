@@ -9,10 +9,10 @@ class AllScreens extends StatefulWidget {
   const AllScreens({Key? key}) : super(key: key);
 
   @override
-  _AllScreensState createState() => _AllScreensState();
+  AllScreensState createState() => AllScreensState();
 }
 
-class _AllScreensState extends State<AllScreens> {
+class AllScreensState extends State<AllScreens> {
   final Controller _controller = Controller();
 
   setBottomBarIndex(index) {
@@ -122,7 +122,7 @@ class _AllScreensState extends State<AllScreens> {
     );
   }
 
-  void _onTappedBar(int value) {
+  void onTappedBar(int value) {
     setState(() {
       _controller.controllerAllScreens.currentIndex = value;
     });

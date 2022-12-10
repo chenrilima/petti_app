@@ -20,8 +20,8 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          primary: AppTheme.colors.green, // background
-          onPrimary: Colors.white, // foreground
+          foregroundColor: Colors.white,
+          backgroundColor: AppTheme.colors.green, // foreground
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
           padding: EdgeInsets.symmetric(horizontal: width!, vertical: heigth!),

@@ -4,10 +4,10 @@ class Companies extends StatefulWidget {
   const Companies({Key? key}) : super(key: key);
 
   @override
-  _CompaniesState createState() => _CompaniesState();
+  CompaniesState createState() => CompaniesState();
 }
 
-class _CompaniesState extends State<Companies> {
+class CompaniesState extends State<Companies> {
   final bool _checkBox = false;
 
   @override
@@ -87,7 +87,7 @@ class _CompaniesState extends State<Companies> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: const Color(0xff00C29D),
+                    backgroundColor: const Color(0xff00C29D),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 90, vertical: 15),
                     shape: const BeveledRectangleBorder(

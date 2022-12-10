@@ -1,5 +1,5 @@
 class ControllerFilter {
-  var currentSelectedValue;
+  dynamic currentSelectedValue;
 
   late String selectedValue;
   List<String> listOfValue = ['1', '2', '3', '4', '5'];

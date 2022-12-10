@@ -4,10 +4,10 @@ class Cadastro extends StatefulWidget {
   const Cadastro({Key? key}) : super(key: key);
 
   @override
-  _CadastroState createState() => _CadastroState();
+  CadastroState createState() => CadastroState();
 }
 
-class _CadastroState extends State<Cadastro> {
+class CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

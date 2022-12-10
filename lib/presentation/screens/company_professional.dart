@@ -10,10 +10,10 @@ class CompanyProfessional extends StatefulWidget {
   const CompanyProfessional({Key? key}) : super(key: key);
 
   @override
-  _CompanyProfessionalState createState() => _CompanyProfessionalState();
+  CompanyProfessionalState createState() => CompanyProfessionalState();
 }
 
-class _CompanyProfessionalState extends State<CompanyProfessional> {
+class CompanyProfessionalState extends State<CompanyProfessional> {
   @override
   Widget build(BuildContext context) {
     Param param = Provider.of<Param>(context, listen: false);

@@ -8,10 +8,10 @@ import 'package:petti_app/presentation/widgets/cards.dart';
 
 class Filter extends StatefulWidget {
   @override
-  _FilterState createState() => _FilterState();
+  FilterState createState() => FilterState();
 }
 
-class _FilterState extends State<Filter> {
+class FilterState extends State<Filter> {
   final Controller _controller = Controller();
 
   @override

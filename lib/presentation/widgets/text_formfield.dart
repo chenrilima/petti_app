@@ -4,7 +4,7 @@ class TextFormFields extends StatelessWidget {
   Function onChanged;
   String? hintText;
 
-  TextFormFields({required this.onChanged, this.hintText});
+  TextFormFields({super.key, required this.onChanged, this.hintText});
 
   @override
   Widget build(BuildContext context) {

@@ -35,7 +35,7 @@ class Background extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(90))),
                     child: Image.asset(
-                      "images/pawdogicon.png",
+                      "assets/images/pawdogicon.png",
                       width: 50,
                       height: 50,
                     ),

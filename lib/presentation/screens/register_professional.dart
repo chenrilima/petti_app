@@ -8,10 +8,10 @@ class RegisterProfessional extends StatefulWidget {
   const RegisterProfessional({Key? key}) : super(key: key);
 
   @override
-  _RegisterProfessionalState createState() => _RegisterProfessionalState();
+  RegisterProfessionalState createState() => RegisterProfessionalState();
 }
 
-class _RegisterProfessionalState extends State<RegisterProfessional> {
+class RegisterProfessionalState extends State<RegisterProfessional> {
   final _image = true;
 
   @override

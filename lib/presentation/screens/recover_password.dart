@@ -8,10 +8,10 @@ class RecoverPassword extends StatefulWidget {
   const RecoverPassword({Key? key}) : super(key: key);
 
   @override
-  _RecoverPasswordState createState() => _RecoverPasswordState();
+  RecoverPasswordState createState() => RecoverPasswordState();
 }
 
-class _RecoverPasswordState extends State<RecoverPassword> {
+class RecoverPasswordState extends State<RecoverPassword> {
   @override
   Widget build(BuildContext context) {
     return Background(

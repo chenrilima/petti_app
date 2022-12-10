@@ -14,10 +14,10 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  HomeState createState() => HomeState();
 }
 
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double widscreen = MediaQuery.of(context).size.width;
@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "images/filter.png",
+                  "assets/images/filter.png",
                   width: 50,
                   height: 50,
                 ),
@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
                               width: 110,
                               height: 50,
                               child: Image.asset(
-                                "images/womam.png",
+                                "assets/images/womam.png",
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -141,9 +141,9 @@ class _HomeState extends State<Home> {
                                   heigth: 10,
                                   text: 'Entrar em contato',
                                   onPressed: () {
-                                    Future.delayed(const Duration(seconds: 3),
+                                    Future.delayed(const Duration(seconds: 5),
                                         () {
-                                      _showDialog();
+                                      //_showDialog();
                                     });
                                   }),
                             )
@@ -181,7 +181,7 @@ class _HomeState extends State<Home> {
                               width: 110,
                               height: 50,
                               child: Image.asset(
-                                "images/vetlife.png",
+                                "assets/images/vetlife.png",
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -254,7 +254,7 @@ class _HomeState extends State<Home> {
                             width: 110,
                             height: 50,
                             child: Image.asset(
-                              "images/womam.png",
+                              "assets/images/womam.png",
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -313,52 +313,54 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-
-  void _showDialog() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        // return object of type Dialog
-        return AlertDialog(
-          contentPadding: const EdgeInsets.all(16),
-          content: SizedBox(
-            width: 270,
-            height: 220,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Image.asset(
-                    "images/img-perfil.png",
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          actions: <Widget>[
-            // usually buttons at the bottom of the dialog
-            Buttons(
-                width: 42,
-                heigth: 10,
-                text: 'Entrar',
-                onPressed: () {
-                  AppNavigation.navigateToNamed(context, "/login",
-                      NavigationType.pushNamedAndRemoveUntil);
-                }),
-            const SizedBox(
-              width: 5,
-            ),
-            Buttons(
-                width: 30,
-                heigth: 10,
-                text: 'Cadastrar',
-                onPressed: () {
-                  AppNavigation.navigateToNamed(context, "/register",
-                      NavigationType.pushNamedAndRemoveUntil);
-                }),
-          ],
-        );
-      },
-    );
-  }
 }
+
+//   void _showDialog() {
+//     showDialog(
+//       context: context,
+//       builder: (BuildContext context) {
+//         // return object of type Dialog
+//         return AlertDialog(
+          
+//           contentPadding: const EdgeInsets.all(16),
+//           content: SizedBox(
+//             width: 270,
+//             height: 220,
+//             child: SingleChildScrollView(
+//               child: Column(
+//                 children: [
+//                   Image.asset(
+//                     "assets/images/img-perfil.png",
+//                     fit: BoxFit.cover,
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//           actions: <Widget>[
+//             // usually buttons at the bottom of the dialog
+//             Buttons(
+//                 width: 42,
+//                 heigth: 10,
+//                 text: 'Entrar',
+//                 onPressed: () {
+//                   AppNavigation.navigateToNamed(context, "/login",
+//                       NavigationType.pushNamedAndRemoveUntil);
+//                 }),
+//             const SizedBox(
+//               width: 5,
+//             ),
+//             Buttons(
+//                 width: 30,
+//                 heigth: 10,
+//                 text: 'Cadastrar',
+//                 onPressed: () {
+//                   AppNavigation.navigateToNamed(context, "/register",
+//                       NavigationType.pushNamedAndRemoveUntil);
+//                 }),
+//           ],
+//         );
+//       },
+//     );
+//   }
+// }
